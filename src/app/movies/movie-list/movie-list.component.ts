@@ -27,7 +27,6 @@ export class MovieListComponent implements OnInit{
           }
         }
         )
-        this.onImageData();
   }
   constructor(){
     this.stateData = true;
@@ -45,16 +44,6 @@ export class MovieListComponent implements OnInit{
           this.stateData = false;
         }
     )
-  }
-  onImageData(){
-    const imageElement: HTMLImageElement = this.myImage?.nativeElement;
-    if (imageElement.complete) {
-      // La imagen ya se ha cargado.
-      this.stateData = false;
-    } else {
-      // La imagen todavía se está cargando.
-
-    }
   }
 }
 
