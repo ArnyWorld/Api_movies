@@ -1,22 +1,19 @@
-<list-skeleton *ngIf="stateData" />
+<!-- <list-skeleton *ngIf="stateData" /> -->
 
-<div *ngIf="!stateData">
+<div>
   <h2 class="text-center text-light mb-4">{{ movieTitle }}</h2>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col" *ngFor="let movie of movies">
+    <div class="col card-movie" *ngFor="let movie of movies">
       <div class="card h-100 link" [routerLink]="['/movie-details', movie.id]">
         <div class="card-img-container">
-          <img
-            src="/assets/placeholder-portrait.jpg"
-            class="card-img-top"
-            *ngIf="stateData"
-          />
-          <img
+          <!-- <img
             [src]="'https://image.tmdb.org/t/p/w1280' + movie.poster_path"
             [alt]="movie.title"
             class="card-img-top"
-            #imageData
-            (load)="onImageData()"
+          /> -->
+          <app-lazy-image
+            [movieUrl]="'https://image.tmdb.org/t/p/w1280' + movie.poster_path"
+            [movieAlt]="movie.title"
           />
         </div>
         <div class="card-body">

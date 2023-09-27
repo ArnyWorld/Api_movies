@@ -5,6 +5,9 @@
   transition:transform .5s ease ;
   position: relative;
 }
+.card-movie{
+  min-height:552px ;
+}
 .movie-text{
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -19,6 +22,10 @@
 }
 .card-img-container{
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 .card-img-container::before{
   content: '';

@@ -1,0 +1,8 @@
+<img
+  [src]="movieUrl"
+  [alt]="movieAlt || 'No title'"
+  (load)="onLoad()"
+  class="card-img-top"
+  [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+/>
+<img *ngIf="!hasLoaded" src="/assets/loader.svg" class="img-loader" alt="" />

@@ -13,6 +13,7 @@ export class MovieListComponent implements OnInit{
   movies:any = [];
   stateData:boolean = true;
   movieTitle:string="";
+
   ngOnInit(): void {
       this.route.queryParams.subscribe(
         qparams =>{
@@ -27,6 +28,10 @@ export class MovieListComponent implements OnInit{
         }
         )
         this.onImageData();
+  }
+  constructor(){
+    this.stateData = true;
+
   }
   getMovies(){
     this._movieService.getListMovies().subscribe(data=>{
@@ -43,7 +48,6 @@ export class MovieListComponent implements OnInit{
   }
   onImageData(){
     const imageElement: HTMLImageElement = this.myImage?.nativeElement;
-
     if (imageElement.complete) {
       // La imagen ya se ha cargado.
       this.stateData = false;

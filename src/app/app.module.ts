@@ -9,6 +9,7 @@ import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListSkeletonComponent } from './shared/list-movie/skeleton-movie.component';
+import { LazyImageComponent } from './shared/lazy-image/lazy-image.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListSkeletonComponent } from './shared/list-movie/skeleton-movie.compon
     HeaderComponent,
     MovieDetailsComponent,
     MovieListComponent,
-    ListSkeletonComponent
+    ListSkeletonComponent,
+    LazyImageComponent
   ],
   imports: [
     BrowserModule,
