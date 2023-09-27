@@ -8,4 +8,4 @@
 4. En la carpeta environments se encontrarán dos archivos con dos 3 variables
 5. Se debe crear una cuenta en [https://developer.themoviedb.org/docs] y obtener una API KEY
 
-![MovieApp](./src/assets/movieApp.jpg)
+![MovieApp](./src/assets/moviePoster.jpg)
